@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeWithDiabetes - Aplicación Móvil</title>
+    <style>
+        /* Estilos reutilizados de la página proporcionada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        }
+
+        header {
+            background: linear-gradient(to right, #4834d4, #686de0);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(72, 52, 212, 0.6) 0%, rgba(104, 109, 224, 0.6) 100%);
+            z-index: 1;
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .mascot-container {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .mascot-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: #4834d4;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .app-section {
+            background-color: #f5f7fa;
+            padding: 4rem 2rem;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .app-section h2 {
+            color: #4834d4;
+            margin-bottom: 2rem;
+        }
+
+        .app-screenshots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .app-screenshots img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .app-download {
+            background-color: #4834d4;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .app-download:hover {
+            background-color: #686de0;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background: linear-gradient(to right, #4834d4, #686de0);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LifeWithDiabetes</h1>
+        <p>¡Tener la diabetes controlada me da calidad de vida!</p>
+        <div class="mascot-container">
+            <img src="logo.jpg" alt="Mascota de LifeWithDiabetes">
+        </div>
+        
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>    
+        <a href="#Descargar">Descargar LifeWithDiabetes</a>   
+        <a href="logros.html">Logros</a>
+        <a href="Agradecimientos.html">Agradecimientos</a>
+        
+    </nav>
+
+    <div  
+        style="
+                background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 15px;
+                margin-top: 2rem;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            "> <h2>¿Qué es LifeWithDiabetes?</h2>
+                <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">
+                    LifeWithDiabetes es una aplicación innovadora diseñada para transformar la manera en que las personas manejan su diabetes día a día. Nuestra plataforma integral ofrece todas las herramientas necesarias para mantener un control efectivo de la condición, promoviendo un estilo de vida más saludable y una mejor calidad de vida.
+                    LifeWithDiabetes no es solo una aplicación de seguimiento, es un sistema integral de gestión de la diabetes que empodera a los usuarios para tomar el control de su salud. Con herramientas completas y funciones personalizables, ayudamos a nuestros usuarios a mantener un estilo de vida saludable y equilibrado, facilitando el manejo diario de la diabetes.      
+                </p>
+            </div>
+
+            <div  
+        style="
+                background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 15px;
+                margin-top: 2rem;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            "> <h2>Caracteristicas Principales</h2>
+                <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                    Control de Glicemia
+                    - Registro fácil y rápido de niveles de glucosa en sangre
+                    - Visualización de tendencias mediante gráficos intuitivos
+                    - Exportación de datos para compartir con profesionales de la salud               
+                </p>
+            </div>
+
+            <div  
+        style="
+                background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 15px;
+                margin-top: 2rem;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            "> 
+                <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                    Seguimiento Nutricional
+                    - Extenso catálogo de alimentos con información nutricional detallada
+                    - Calculadora de carbohidratos y calorías
+                    - Registro de alimentos consumidos
+                    - Sugerencias de alternativas saludables              
+                </p>
+            </div>
+            <div  
+            style="
+                    background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                    color: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    margin-top: 2rem;
+                    max-width: 800px;
+                    margin-left: auto;
+                    margin-right: auto;
+                "> 
+                    <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                        Monitor de Actividad Física
+                        - Registro de diferentes tipos de ejercicios
+                        - Seguimiento de duración e intensidad   
+                    </p>
+                </div>
+                <div  
+                style="
+                        background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                        color: white;
+                        padding: 2rem;
+                        border-radius: 15px;
+                        margin-top: 2rem;
+                        max-width: 800px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    "> 
+                        <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                            Tabla Nutricional Completa
+                            - Índice glucémico de los alimentos
+                            - Porciones recomendadas
+                            - Alternativas y sustitutos saludables
+                            - Guía de lectura de etiquetas nutricionales
+                        </p>
+                    </div>
+                    <div  
+                    style="
+                            background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                            color: white;
+                            padding: 2rem;
+                            border-radius: 15px;
+                            margin-top: 2rem;
+                            max-width: 800px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        "> 
+                            <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                                Recomendaciones Personalizadas
+                                - Productos específicos para diabéticos
+                                - Suplementos nutricionales recomendados
+                            </p>
+                        </div>
+                        <div  
+                        style="
+                                background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+                                color: white;
+                                padding: 2rem;
+                                border-radius: 15px;
+                                margin-top: 2rem;
+                                max-width: 800px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            "> 
+                                <p style="font-size: 1.1rem; margin: 0; font-weight: bold; font-style: oblique; text-align: justify;">      
+                                    Beneficios Clave
+                                    - Interfaz intuitiva y fácil de usar
+                                    - Sincronización automática entre dispositivos
+                                    - Reportes detallados y personalizables
+                                    - Recordatorios y notificaciones configurables
+                                    - Comunidad de apoyo y recursos educativos
+                                    - Respaldo de profesionales de la salud
+                                </p>
+                            </div>
+
+    <div class="container">
+        <section id="Descargar" class="app-section">
+            <h2>Descarga nuestra aplicación móvil</h2>
+            <div class="app-screenshots">
+                <img src="App.jpg" alt="Pantalla 1 de la aplicación">
+                <img src="App1.jpg" alt="Pantalla 2 de la aplicación">
+                <img src="App2.jpg" alt="Pantalla 3 de la aplicación">
+            </div>
+            <a href="com.companyname.menu.apk" class="app-download">Descargar APK</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 LifeWithDiabetes - Tu salud es nuestra prioridad</p>
+        <p>Contáctanos: <a href="mailto:lifewithdiabetes.expotec@gmail.com" style="color: white; text-decoration: underline;">lifewithdiabetes.expotec@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+

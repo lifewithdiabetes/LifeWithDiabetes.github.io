@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeWithDiabetes - Información sobre Diabetes</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        }
+
+        header {
+            background: linear-gradient(to right, #4834d4, #686de0);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(72, 52, 212, 0.6) 0%, rgba(104, 109, 224, 0.6) 100%);
+            z-index: 1;
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .mascot-container {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .mascot-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+
+        nav {
+            background-color: #4834d4;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .symptom-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .symptom-item {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .symptom-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #4834d4;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #4834d4;
+            border-radius: 2px;
+        }
+
+
+        footer {
+            background: linear-gradient(to right, #4834d4, #686de0);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #4834d4;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .symptom-list {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LifeWithDiabetes</h1>
+        <p>¡Tener la diabetes controlada me da calidad de vida!</p>
+        <div class="mascot-container">
+            <img src="diabetico letras.png" alt="Mascota de LifeWithDiabetes">
+        </div>
+       
+    </div>
+    </header>
+
+    <nav>
+        <a href="App.html">Aplicación</a>
+        <a href="#tipos">Tipos de Diabetes</a>
+        <a href="#sintomas">Síntomas</a>
+        <a href="#Prevención y Manejo">Prevención y Manejo</a>
+        <a href="#tratamiento">Tratamiento</a>
+        <a href="logros.html">Logros</a>
+        <a href="Agradecimientos.html">Agradecimientos</a>
+        
+    </nav>
+
+    <div class="container">
+        <section id="inicio" class="info-card">
+            <h2>¿Qué es la Diabetes?</h2>
+            <p>La diabetes es una enfermedad crónica que ocurre cuando el cuerpo no puede producir suficiente insulina o no la utiliza de manera eficiente. La insulina es una hormona que se produce en el páncreas y que permite que la glucosa (azúcar) que obtenemos de los alimentos ingrese a las células para ser utilizada como fuente de energía.</p>
+        </section>
+
+        <section id="tipos" class="info-card">
+            <h2>Tipos de Diabetes</h2>
+            <div class="symptom-list">
+                <div class="symptom-item">
+                    <h3>Tipo 1</h3>
+                    <p>El cuerpo no produce insulina. Es más común en niños y jóvenes. Requiere insulina diaria para mantener los niveles de azúcar bajo control.</p>
+                </div>
+                <div class="symptom-item">
+                    <h3>Tipo 2</h3>
+                    <p>El cuerpo no produce suficiente insulina o no la utiliza adecuadamente. Se puede controlar con dieta, ejercicio y medicación oral.</p>
+                </div>
+                <div class="symptom-item">
+                    <h3>Gestacional</h3>
+                    <p>Ocurre durante el embarazo y generalmente desaparece después del parto. Requiere un control especial para proteger la salud del bebé.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sintomas" class="info-card">
+            <h2>Síntomas Comunes</h2>
+            <div class="symptom-list">
+                <div class="symptom-item">
+                    <h3>Sed Excesiva</h3>
+                    <p>Necesidad constante de beber agua y sequedad en la boca</p>
+                </div>
+                <div class="symptom-item">
+                    <h3>Fatiga</h3>
+                    <p>Sensación de cansancio y debilidad constante</p>
+                </div>
+                <div class="symptom-item">
+                    <h3>Pérdida de Peso</h3>
+                    <p>Disminución de peso sin razón aparente</p>
+                </div>
+                <div class="symptom-item">
+                    <h3>Visión Borrosa</h3>
+                    <p>Cambios repentinos en la claridad de la visión</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Prevención y Manejo" class="info-card">              
+            <h2>Prevención y Manejo</h2>                          
+                <div class="symptom-item">
+                    <p>Aunque no se puede prevenir la diabetes tipo 1, la diabetes tipo 2 puede prevenirse o controlarse con cambios en el estilo de vida, como mantener un peso saludable, hacer ejercicio regularmente y seguir una dieta balanceada. En los casos donde la diabetes ya está presente, el tratamiento generalmente incluye la administración de insulina (en diabetes tipo 1) o medicamentos orales, además de un control constante de la glucosa en sangre.
+
+                        Es importante realizar chequeos médicos regulares para detectar la diabetes a tiempo, ya que el control adecuado de la glucosa puede prevenir muchas de sus complicaciones.</p>
+                </div>
+               
+        </section>
+
+        <section id="tratamiento" class="info-card">
+            <h2>Tratamiento y Control</h2>
+            <p>El manejo efectivo de la diabetes incluye:</p>
+            <ul>
+                <li>Control regular de glucosa en sangre</li>
+                <li>Dieta balanceada y nutritiva</li>
+                <li>Ejercicio regular adaptado a cada persona</li>
+                <li>Medicación según prescripción médica</li>
+                <li>Revisiones médicas periódicas</li>
+                <li>Cuidado especial de pies y heridas</li>
+                <li>Mantenimiento de un peso saludable</li>
+            </ul>
+        </section>      
+    </div>
+    
+    
+
+           
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>© 2024 LifeWithDiabetes - Tu salud es nuestra prioridad</p>
+        <p>Contáctanos: <a href="mailto:lifewithdiabetes.expotec@gmail.com" style="color: white; text-decoration: underline;">lifewithdiabetes.expotec@gmail.com</a></p>
+    </footer>
+</body>
+</html>
